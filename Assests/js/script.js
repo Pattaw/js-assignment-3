@@ -22,7 +22,27 @@ submit.addEventListener("click",function(e){
     }
    
 })
+siteName.addEventListener("input", function() {
+    if (validSiteName() || siteName.value === "") {
+     
+        siteName.classList.replace("is-invalid","is-valid")
+      
+    } else {
+        
+        siteName.classList.replace("is-valid","is-invalid")
+       
+    }
+})
 
+siteUrl.addEventListener("input", function() {
+    if (validSiteURL() || siteUrl.value === "") {
+        siteUrl.classList.replace("is-invalid","is-valid")
+      
+    } else {
+        siteUrl.classList.replace("is-valid","is-invalid")
+      
+    }
+})
 
 function addElement(){
         if(validSiteName() && validSiteURL()){
@@ -35,6 +55,7 @@ function addElement(){
             displayProducts(arr)
             addItemsToLocalStorage(arr)
         }
+        
 }
 
 
@@ -96,13 +117,10 @@ function visitProduct(i){
 }
 
 search.oninput = function(){
-  
-        searchProducs()
-   
-    
+        searchProducts();
 }
 
-function searchProducs(){
+function searchProducts(){
 let newArr= [];
 
 for(let i =0;i<arr.length;i++){
@@ -113,13 +131,13 @@ for(let i =0;i<arr.length;i++){
     }
 }
 tbody.innerHTML = "";
+displayProducts(newArr)
 }
 
 
 function validSiteName() {
     var regex = /^[a-zA-Z]+$/g;
 
-    debugger;
     if (regex.test(siteName.value)) {
       siteName.classList.replace("is-invalid","is-valid")
       
