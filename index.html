@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark </title>
+    <link rel="icon" href="./Assests/imgs/2899445-removebg-preview.png" type="image/icon type">
+
+    <!-- fonts awesome -->
+    <link rel="stylesheet" href="./Assests/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./Assests/css/bootstrap.min.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- main css file -->
+    <link rel="stylesheet" href="./Assests/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo text-center mt-5 "><h1 class="position-relative">bookmarker</h1></div>
+
+        <div class="parent">
+            <div class="title text-center my-4 fs-4 text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></div>
+            <form action="#" class="d-flex flex-column py-4">
+                <label for="siteName" class="mb-1"><i class="fa-solid fa-book-bookmark "></i> Site Name</label>
+                <input type="text" class="form-control mb-4 is-invalid" id="siteName">
+
+                <label for="siteUrl" class="mb-1"><i class="fa-solid fa-link"></i> Site Url</label>
+                <input type="text" class="form-control mb-4 is-invalid" id="siteUrl">
+                <div class="btns d-flex w-50 justify-content-between align-items-center m-auto">
+
+                <button class="btn btn-danger px-5 py-2 d-inline-block m-auto d-block submit">Submit</button>
+                <button class="btn btn-outline-success px-5 py-2 d-inline-block m-auto d-none update">Update</button>
+                <button class="btn btn-primary px-5 py-2 d-inline-block m-auto clearAll">Clear all</button>
+
+                </div>
+
+                <input type="text" name="search" id="search" class="form-control w-75 mx-auto mt-4">
+            </form>
+           
+
+            <table class="table text-center bg-light">
+                <thead >
+                    <tr>
+                    <th>index</th>
+                    <th>website name</th>
+                    <th>update</th>
+                    <th>delete</th>
+                    <th>visit</th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent" class="text-center">
+                    <!-- <tr>
+                        <td>0</td>
+                        <td>abdo</td>
+                        <td><button class="btn btn-success px-3"><i class="fa-solid fa-eye"></i> visit</button></td>
+                        <td><button class="btn btn-danger px-3"><i class="fa-solid fa-trash"></i> delete</button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+            
+    </div>
+    
+    <script src="./Assests/js/all.min.js"></script>
+    <script src="./Assests/js/bootstrap.bundle.min.js"></script>
+    <script src="./Assests/js/script.js"></script>
+</body>
+</html>
